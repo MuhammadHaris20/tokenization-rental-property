@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+</head>
+<body>
+    <h2>Test API Connection</h2>
+    
+    <button onclick="testXAMPP()">Test XAMPP</button>
+    <button onclick="testBackend()">Test Backend API</button>
+    
+    <div id="result" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc;"></div>
+
+    <script>
+    async function testXAMPP() {
+        const result = document.getElementById('result');
+        result.innerHTML = 'Testing...';
+        
+        try {
+            const response = await fetch('http://localhost/');
+            const text = await response.text();
+            result.innerHTML = '✅ XAMPP is running!<br><br>Response preview: ' + text.substring(0, 200) + '...';
+        } catch (error) {
+            result.innerHTML = '❌ XAMPP not running: ' + error.message;
+        }
+    }
+
+    async function testBackend() {
+        const result = document.getElementById('result');
+        result.innerHTML = 'Testing backend API...';
+        
+        try {
+            const response = await fetch('http://localhost/rwa-backend/api/get_kyc_data.php');
+            const data = await response.json();
+            result.innerHTML = '✅ Backend API responded!<br><br>' + 
+                              'Success: ' + data.success + '<br>' +
+                              'Data: <pre>' + JSON.stringify(data, null, 2) + '</pre>';
+        } catch (error) {
+            result.innerHTML = '❌ Backend API error: ' + error.message;
+        }
+    }
+    </script>
+</body>
+</html>
