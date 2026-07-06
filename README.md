@@ -52,11 +52,23 @@ Two custom hooks centralize all blockchain access: useWeb3 (wallet connection, a
 
 📸 Screenshots
 
+### Admin Dashboard
+   ![Admin Dashboard](Admin Dashboard.png)
+   
+### KYC Approve/Reject
+   ![KYC Approve/Reject](KYC ApproveReject.png)
+
 ### Marketplace
    ![Marketplace](Marketplace.png)
 
-   ### Admin Dashboard
-   ![Admin Dashboard](Admin Dashboard.png)
+### Overview
+   ![Overview](Overview.png)
+
+### Property Listing
+   ![Property Listing](Property Listing.png)
+
+### User Dashboard
+   ![User Dashboard](User Dashboard.png)
 
 🚀 Getting Started
 
