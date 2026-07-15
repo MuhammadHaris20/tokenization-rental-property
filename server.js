@@ -18,7 +18,7 @@ app.use("/uploads/property-documents", express.static("uploads/property-document
 
 // Middleware
 app.use(cors({
-  origin: "http://localhost:3000", // Your React app URL
+  origin: "http://localhost:3000", //
   credentials: true
 }));
 app.use(express.json());
@@ -33,7 +33,7 @@ app.use("/api/contact", contactRoutes);
 app.use("/api/kyc", kycRoutes);
 app.use("/api/properties", propertyRoutes);
 app.use("/api/user", userRoutes);
-app.use('/api/notifications', notificationRoutes); // ✅ MOVED HERE - before 404 handler
+app.use('/api/notifications', notificationRoutes); // 
 
 // For Profile Pictures
 app.use("/uploads/profile-pictures", express.static("uploads/profile-pictures"));
